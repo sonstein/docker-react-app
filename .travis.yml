@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start Creating an image with dockerfile"
-  - docker build -t sonstein/react -f Dockerfile.dev
+  - docker build -t sonstein/react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true sonstein/react npm run test -- --coverage
